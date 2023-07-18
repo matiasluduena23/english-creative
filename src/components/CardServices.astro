@@ -1,0 +1,77 @@
+---
+import ListCard from "./ListCard.astro";
+
+const {title, month, goodFor, color, darkColor, wave} = Astro.props;
+---
+
+<div class="card">
+    <h2>{title}</h2>
+    <p class="month">{month} <span>month</span></p>
+  
+    <ListCard colorSvg={color} />
+    <div class="good-for">
+        <p>Good for:</p>
+        <p>{goodFor}</p>
+    </div>
+    <button>See details</button>
+</div>
+
+<style define:vars={{color, darkColor,  wave}}>
+
+    .card {
+        min-width: 300px;
+        height: 500px;
+        padding: 1rem;
+        background: var(--wave);
+        text-align: center;
+        border-radius: 10px;
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px; ;
+    }
+
+    h2 {
+        text-transform: uppercase;
+        font-weight: 600;
+        font-size: 1rem;
+        
+    }
+
+    .month {
+        font-size: 5rem;
+        font-weight: 600;
+        font-family: var(--font-secondary);
+        margin-block: -1rem;
+        color: #f4f4f4;
+    }
+
+    .month span {
+        font-size: 1rem;
+        margin-left: -15px;
+    }
+
+    .good-for p:first-child{
+        color: var(--color);
+        font-weight: 600;
+    }
+
+    .good-for p:last-child{
+        font-size: 12px;
+        font-weight: 500;
+    }
+
+    button {
+        margin-block: 2rem;
+        padding: 0.8rem 2rem;
+        border: none;
+        border-radius: 20px;
+        background: linear-gradient(to right bottom, var(--darkColor) 40px, var(--color));
+        color: #fff;
+        transition: background 300ms ease-in;
+        font-weight: 700;
+        cursor: pointer;
+    }
+
+    button:hover {
+        background: linear-gradient(to left bottom, var(--darkColor) 20px , var(--color))
+    }
+
+</style>

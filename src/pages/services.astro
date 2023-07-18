@@ -1,0 +1,37 @@
+---
+import CardServices from "../components/CardServices.astro";
+import BaseLayout from "../layouts/BaseLayout.astro";
+---
+
+<BaseLayout>
+
+
+    <main class="bg-color">
+        <h1 class="title">services</h1>
+        <div class="grid">
+            <CardServices title="spot mentoring" month="3" goodFor="Markers and design enthusiasts" color="#4e75d0" darkColor="#003ed0" wave="url('../assets/wave.svg')"/>
+
+            <CardServices title="procuction support" month="6" goodFor="Frelancers and solo designers" color="#459a53" darkColor="#08564d" wave="url('../assets/wave2.svg')"/>
+
+            <CardServices title="tailored learning" month="12" goodFor="Keeners and career switchers" color="#fe534c" darkColor="#db3131" wave="url('../assets/wave3.svg')"/>
+        </div>
+        
+    </main>
+
+
+</BaseLayout>
+
+<style>
+    main {
+        padding-top: 3rem; 
+        min-height: 100vh;
+    }
+
+    .grid {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 2rem;
+    }
+</style>

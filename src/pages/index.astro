@@ -1,15 +1,110 @@
 ---
+import BaseLayout from '../layouts/BaseLayout.astro'
+
+
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<BaseLayout >
+
+	<main class="bg-color">
+		<div class="container">
+			<div class="content-text">
+				<h1>
+					Experience a new <br> way to grow <br> with <span>your brand</span>
+				</h1>
+				<div class="action">
+					<p >English Creative is about <br> learn english <br> with powerful couching </p>
+					<a href="/services/" class="btn">Try it!</a>
+				</div>
+			</div>
+			<div class="video">
+				<img src="../assets/video.jpg" alt="home-video">
+			</div>
+		</div>
+	  </main>
+
+</BaseLayout>
+
+<style>
+	
+	/* Mobile First */
+
+main {
+    
+    min-height: 100vh;
+}
+
+.content-text {
+	padding-block: 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+	gap: 1rem;
+    text-align: center; 
+}
+
+h1 {
+	
+	font-size: 2.2rem;
+	font-family: var(--font-secondary);
+	line-height: 1.3;  
+}
+
+span {
+	color: var(--dark-orange-clr);
+}
+
+p {
+	margin-bottom: 2rem;
+}
+
+.btn {
+	display: inline-block;
+	background-color: var(--dark-green-clr);
+	color: var(--bg-light-clr);
+	padding: 1rem 2.5rem;
+	border-radius: 3px;
+	transition: background 300ms ease-in-out;
+}
+
+.btn:hover {
+	background-color: hsl(173, 83%, 31%);
+}
+
+.video {
+    width: min(100%, 650px);
+}
+
+img {
+	border-radius: 3px;
+}
+
+/* Desktop */
+@media(min-width: 900px){
+    main {
+        padding-block: 5rem;
+    }
+
+	h1 {
+		width: 50%;
+		font-size: 3.7rem;
+	}
+	.action {
+		width: 40%;
+	}
+
+    .content-text {
+		
+        flex-direction: row;
+        justify-content: center;
+		text-align: start;
+        gap: 0;
+    }
+    
+    .video {
+        margin-top: 1rem;
+		margin-inline: auto;
+    }  
+}
+
+</style>

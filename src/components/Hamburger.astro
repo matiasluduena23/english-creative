@@ -1,0 +1,59 @@
+---
+
+---
+
+<button class="toggle" aria-controls="primary-navigation" aria-expanded="false">
+    <span class="line"></span>
+</button>
+
+<style>
+     button {
+        display: none;
+        --btn-clr: var(--dark-orange-clr);
+        background: transparent;
+        border: 2px solid var(--btn-clr);
+        border-radius: 5px;
+        width: 40px;
+        height: 40px;
+        cursor: pointer;
+    }
+
+    .line {
+        display: block;
+        position: relative;
+        transition: translateY 300ms ease-in-out;
+        transform-origin: center;
+    }
+
+    .line,
+    .line:after,
+    .line:before {
+        width: 80%;
+        height: 3px;
+        background: var(--btn-clr);
+        margin-inline: auto;
+        
+    }
+
+    .line:after,
+    .line:before {
+        content: '';
+        position: absolute;
+        left: 0;
+        width: 100%;
+    }
+
+    .line:before {
+        bottom: 8px;
+    }
+
+    .line:after {
+        top: 8px;
+    }
+
+    @media(max-width: 900px) {
+        button {
+            display: block;
+        }
+    }
+</style>

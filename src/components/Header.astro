@@ -1,0 +1,39 @@
+---
+import Navigation from "./Navigation.astro";
+import Hamburger from "./Hamburger.astro";
+
+---
+
+<header>
+    <nav  class="container">
+        <figure class="logo">
+            <img src="" alt="logo">
+        </figure>
+        <Hamburger />
+
+        <Navigation />
+    </nav>
+</header>
+
+<style>
+
+    header {
+        height: 60px;
+        background: var(--bg-light-clr);
+    }
+
+    nav {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        
+    }
+
+   
+
+ 
+</style>
+<script>
+    import '../scripts/navigation'
+</script>

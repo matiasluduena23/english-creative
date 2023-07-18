@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Tammudu+2:wght@400;600;700&family=Open+Sans:wght@300;400;600;700&display=swap');
+
+:root {
+    --font-primary: 'Open Sans', sans-serif;
+    --font-secondary: 'Baloo Tammudu 2', cursive;
+
+    /* Colors */
+    --bg-light-clr: #f4ece0;
+    --bg-dark-clr: #202124;
+    --dark-blue-clr: #003ed0;
+    --soft-blue-clr: #4e75d0;
+    --light-blue-clr: #92a4d0;
+    --dark-red-clr: #db3131;
+    --soft-red-clr: #fe534c;
+    --light-red-clr: #feaca9;
+    --dark-orange-clr: #ef7726;
+    --soft-orange-clr: #ffc050;
+    --light-orange-clr: #fee09c;
+    --dark-green-clr: #08564d;
+    --soft-green-clr: #459a53;
+    --light-green-clr: #b2f2bd;
+
+}
+
+*, *:after, *:before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    overflow-x: hidden;
+    letter-spacing: .1rem;
+    font-family: var(--font-primary);
+    width: 100%;
+  }
+  
+  ul {
+    list-style: none;
+  }
+  
+  a{
+    text-decoration: none;
+  }
+  
+  img {
+    max-width: 100%;
+    display: block;
+  }
+
+  .container {
+    max-width: 1100px;
+    width: 90%;
+    margin-inline: auto;
+  }
+
+  .bg-color {
+    background: var(--bg-light-clr);
+  }
+
+  .title {
+    font-family: var(--font-secondary);
+    font-size: 3rem;
+    text-align: center;
+  }
