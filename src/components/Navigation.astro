@@ -30,13 +30,14 @@
 
     @media(max-width: 900px) {
         .navigation {
+            
             position: absolute;
             right: 0;  
             top: 60px;
             width: 100%;
             height: 450px;
             background: var(--soft-orange-clr);
-            display: flex;
+            display: none;
             flex-direction: column;
             justify-content: center;
             text-align: center;
@@ -45,8 +46,8 @@
         }
 
         .navigation.expanded {
-            translate: 0;
-            
+            display: flex;
+            translate: 0;  
         }
         
     }

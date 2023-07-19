@@ -52,10 +52,16 @@ body{
     max-width: 1100px;
     width: 90%;
     margin-inline: auto;
+    
   }
 
   .bg-color {
     background: var(--bg-light-clr);
+  }
+
+  .border-radius{
+    border-radius: 5px;
+
   }
 
   .title {

@@ -8,7 +8,7 @@
     <input type="email" name="email" id="email" placeholder="Your Email">
     <input type="number" name="phone" id="phone" placeholder="Your Phone">
     <textarea name="message" id="" cols="30" rows="10" placeholder="Your Message"></textarea>
-    <button>Send</button>
+    <button class="border-radius">Send</button>
 </form>
 
 
@@ -19,17 +19,47 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        gap: 2rem;
+        gap: 1.2rem;
     }
 
-
-    input {
+    input,
+    textarea {
+        background-color: rgb(231, 231, 231);
         border: none;
-        display: inline-block;
-        background-color: lightgrey;
+        padding-block: 0.7rem;
         border-radius: 5px;
-        padding-block: 0.5rem;
-        width: 250px;
+        max-width: 400px;
+        width: 100%;
+        font-weight: 600;
+        outline-color: var(--dark-orange-clr);
+    }
+
+    input::placeholder,
+    textarea::placeholder {
+      padding-left: 1rem;
+      font-family: var(--font-primary);      
+    }
+
+    button {
+        padding: 0.7rem 2rem;
+        border: none;
+        background: var(--dark-orange-clr);
+        color: var(--bg-light-clr);
+        font-weight: 600;
+        letter-spacing: 1.2px;
+        text-transform: uppercase; 
+        cursor: pointer;
+    }
+
+    button:hover {
+        background: var(--soft-orange-clr);
+    }
+
+    @media(min-width: 900px) {
+       form {
+        /* width: 80%; */
+        align-items: start;
+       }
     }
 
     
