@@ -25,7 +25,7 @@ const {title, month, goodFor, color, darkColor, wave} = Astro.props;
         background: var(--wave);
         text-align: center;
         border-radius: 10px;
-        box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px; ;
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px; 
     }
 
     h2 {
@@ -55,7 +55,9 @@ const {title, month, goodFor, color, darkColor, wave} = Astro.props;
 
     .good-for p:last-child{
         font-size: 12px;
-        font-weight: 500;
+        font-weight: 600;
+        color: rgba(0, 0, 0, .5);
+        text-transform: capitalize;
     }
 
     button {

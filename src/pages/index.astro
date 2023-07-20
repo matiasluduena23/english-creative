@@ -6,7 +6,7 @@ import BaseLayout from '../layouts/BaseLayout.astro'
 
 <BaseLayout >
 
-	<main class="bg-color">
+	<main>
 		<div class="container">
 			<div class="content-text">
 				<h1>
@@ -20,8 +20,22 @@ import BaseLayout from '../layouts/BaseLayout.astro'
 			<div class="video">
 				<img src="../assets/video.jpg" alt="home-video">
 			</div>
+			<div class="social border-radius">
+				<div class="col">
+					<h2>+7</h2>
+					<p>company experiences</p>
+				</div>
+				<div class="col">
+					<h2>+30</h2>
+					<p>professionals helper </p>
+				</div>
+				<div class="col">
+					<h2>+15</h2>
+					<p>speakers conferences</p>
+				</div>
+			</div>
 		</div>
-	  </main>
+	</main>
 
 </BaseLayout>
 
@@ -30,8 +44,8 @@ import BaseLayout from '../layouts/BaseLayout.astro'
 	/* Mobile First */
 
 main {
+		
     
-    min-height: 100vh;
 }
 
 .content-text {
@@ -39,7 +53,7 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
-	gap: 1rem;
+		gap: 1rem;
     text-align: center; 
 }
 
@@ -73,21 +87,50 @@ p {
 
 .video {
     width: min(100%, 650px);
+		margin-bottom: 4rem;
 }
 
 img {
 	border-radius: 3px;
 }
 
+.social {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	gap: 2rem;
+	background: #fff;
+	padding: 1rem;
+	max-width: 400px;
+	margin-inline: auto;
+	box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px; 
+}
+
+.social h2 {
+	color: var(--dark-orange-clr);
+	font-size: 2rem;
+}
+
+.social p {
+	color: rgb(191, 191, 191);
+	text-transform: uppercase;
+	font-size: 16px;
+
+}
 /* Desktop */
 @media(min-width: 900px){
     main {
-        padding-block: 5rem;
+        padding-block: 3rem;
+				
+				
     }
 
 	h1 {
 		width: 50%;
-		font-size: 3.7rem;
+		font-size: 4rem;
+		
 	}
 	.action {
 		width: 40%;
@@ -105,6 +148,17 @@ img {
         margin-top: 1rem;
 		margin-inline: auto;
     }  
+
+		.social {
+			flex-direction: row;
+			padding: 2rem;
+			margin-inline: auto;
+			max-width: 900px;
+		}	
+
+		.social p {
+			margin: 0;
+		}
 }
 
 </style>
