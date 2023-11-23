@@ -1,164 +1,114 @@
 ---
-import BaseLayout from '../layouts/BaseLayout.astro'
-
-
+import SocialStar from '../components/SocialStar.astro';
+import BaseLayout from '../layouts/BaseLayout.astro';
 ---
 
-<BaseLayout >
-
-	<main>
-		<div class="container">
-			<div class="content-text">
-				<h1>
-					Experience a new <br> way to grow <br> with <span>your brand</span>
-				</h1>
-				<div class="action">
-					<p >English Creative is about <br> learn english <br> with powerful couching </p>
-					<a href="/services/" class="btn">Try it!</a>
-				</div>
-			</div>
-			<div class="video">
-				<img src="../assets/video.jpg" alt="home-video">
-			</div>
-			<div class="social border-radius">
-				<div class="col">
-					<h2>+7</h2>
-					<p>company experiences</p>
-				</div>
-				<div class="col">
-					<h2>+30</h2>
-					<p>professionals helper </p>
-				</div>
-				<div class="col">
-					<h2>+15</h2>
-					<p>speakers conferences</p>
-				</div>
-			</div>
-		</div>
-	</main>
-
+<BaseLayout>
+    <main>
+        <div class="container">
+            <div class="content-text">
+                <h1>
+                    Where your English comes to <span class="underline"
+                        >life</span
+                    >
+                </h1>
+                <p class="subtitle">
+                    Powerful words <span>Positive change!!!</span>
+                </p>
+                <a href="/services/" class="btn">Try it!</a>
+            </div>
+            <div class="video">
+                <img src="../images/video.jpg" alt="home-video" />
+            </div>
+            <div class="social border-radius">
+                <SocialStar number="+7" description="company experiences" />
+                <SocialStar number="+30" description="professionals helper" />
+                <SocialStar number="+15" description="speakers conferences" />
+            </div>
+        </div>
+    </main>
 </BaseLayout>
 
 <style>
-	
-	/* Mobile First */
-
-main {
-		
-    
-}
-
-.content-text {
-	padding-block: 3rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-		gap: 1rem;
-    text-align: center; 
-}
-
-h1 {
-	
-	font-size: 2.2rem;
-	font-family: var(--font-secondary);
-	line-height: 1.3;  
-}
-
-span {
-	color: var(--dark-orange-clr);
-}
-
-p {
-	margin-bottom: 2rem;
-}
-
-.btn {
-	display: inline-block;
-	background-color: var(--soft-green-clr);
-	color: var(--bg-light-clr);
-	padding: 1rem 2.5rem;
-	border-radius: 3px;
-	transition: background 300ms ease-in-out;
-}
-
-.btn:hover {
-	background-color: hsl(173, 38%, 50%);
-}
-
-.video {
-    width: min(100%, 650px);
-		margin-bottom: 4rem;
-}
-
-img {
-	border-radius: 3px;
-}
-
-.social {
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	text-align: center;
-	gap: 2rem;
-	background: #fff;
-	padding: 1rem;
-	max-width: 400px;
-	margin-inline: auto;
-	box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px; 
-}
-
-.social h2 {
-	color: var(--dark-orange-clr);
-	font-size: 2rem;
-}
-
-.social p {
-	color: rgb(191, 191, 191);
-	text-transform: uppercase;
-	font-size: 16px;
-
-}
-/* Desktop */
-@media(min-width: 900px){
+    /* Mobile First */
     main {
-        padding-block: 3rem;
-				
-				
+        margin-block: var(--block-flow-lg);
     }
-
-	h1 {
-		width: 50%;
-		font-size: 4rem;
-		
-	}
-	.action {
-		width: 40%;
-	}
 
     .content-text {
-		
-        flex-direction: row;
-        justify-content: center;
-		text-align: start;
-        gap: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+        text-align: center;
     }
-    
+
+    /* .title-last-word {
+        color: var(--soft-green-clr);
+        /* border-bottom: 3px solid var(--soft-green-clr); */
+    /* }  */
+
+    .underline {
+        position: relative;
+    }
+
+    .underline::before {
+        content: '';
+        position: absolute;
+        height: 6px;
+        width: 100%;
+        bottom: 10px;
+        left: 0;
+        background-color: var(--soft-green-clr);
+        border-top-right-radius: 150%;
+        border-top-left-radius: 150%;
+    }
+
+    .subtitle {
+        font-size: clamp(1rem, 3vw, 2.2rem);
+        font-weight: 600;
+        font-family: var(--font-third);
+    }
+
+    .subtitle span {
+        font-family: var(--font-fourth);
+        color: var(--soft-green-clr);
+        font-size: clamp(1rem, 3vw, 2.5rem);
+    }
+
+    .btn {
+        display: inline-block;
+        background-color: var(--dark-blue-clr);
+        color: var(--bg-light-clr);
+        font-weight: 600;
+        font-size: 18px;
+        padding: 1rem 4rem;
+        border-radius: 30px;
+        transition: background 300ms ease-in-out;
+        letter-spacing: 1px;
+    }
+
+    .btn:hover {
+        opacity: 0.8;
+    }
+
     .video {
-        margin-top: 1rem;
-		margin-inline: auto;
-    }  
+        width: min(100%, 1000px);
+        margin-inline: auto;
+        margin-block: var(--block-flow-md);
+    }
 
-		.social {
-			flex-direction: row;
-			padding: 2rem;
-			margin-inline: auto;
-			max-width: 900px;
-		}	
+    img {
+        border-radius: 5px;
+    }
 
-		.social p {
-			margin: 0;
-		}
-}
-
+    .social {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        text-align: center;
+        gap: 2rem;
+        padding-block: 2rem;
+        max-width: 1000px;
+        margin-inline: auto;
+    }
 </style>

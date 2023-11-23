@@ -1,30 +1,63 @@
 ---
-import CardServices from "../components/CardServices.astro";
-import BaseLayout from "../layouts/BaseLayout.astro";
+import CardServices from '../components/CardServices.astro';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
+const allServices = await getCollection('services');
 ---
 
 <BaseLayout>
+    <main>
+        <div class="container">
+            <h1>Services</h1>
+            <div class="wrap-text">
+                <p>To find out which services best suit you:</p>
+                <button class="survey"> Survey</button>
+            </div>
 
-
-    <main >
-        <h1 class="title">services</h1>
-        <div class="grid">
-            <CardServices title="spot mentoring" month="3" goodFor="Markers and design enthusiasts" color="#4e75d0" darkColor="#003ed0" wave="url('../assets/wave.svg')"/>
-
-            <CardServices title="procuction support" month="6" goodFor="Frelancers and solo designers" color="#459a53" darkColor="#08564d" wave="url('../assets/wave2.svg')"/>
-
-            <CardServices title="tailored learning" month="12" goodFor="Keeners and career switchers" color="#fe534c" darkColor="#db3131" wave="url('../assets/wave3.svg')"/>
+            <div class="grid">
+                {
+                    allServices.map((service) => (
+                        <CardServices data={service.data} />
+                    ))
+                }
+            </div>
         </div>
-        
     </main>
-
-
 </BaseLayout>
 
 <style>
     main {
-        padding-top: 3rem; 
-        min-height: 100vh;
+        padding-block: var(--block-flow-sm);
+        text-align: center;
+    }
+
+    .wrap-text {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+        margin-top: 1rem;
+    }
+
+    p {
+        font-size: 22px;
+        font-family: var(--font-third);
+    }
+
+    button {
+        border: none;
+        background-color: transparent;
+        color: var(--dark-blue-clr);
+        font-size: 20px;
+        margin-bottom: 0.6rem;
+        cursor: pointer;
+        border-bottom: 1px solid var(--dark-blue-clr);
+    }
+
+    button:hover {
+        color: var(--soft-blue-clr);
+        border-bottom: 1px solid var(--soft-blue-clr);
     }
 
     .grid {
@@ -33,6 +66,12 @@ import BaseLayout from "../layouts/BaseLayout.astro";
         align-items: center;
         flex-wrap: wrap;
         gap: 2rem;
-        margin-top: 2rem;
+        margin-top: 4rem;
+    }
+
+    @media (min-width: 1000px) {
+        .grid {
+            gap: 0;
+        }
     }
 </style>

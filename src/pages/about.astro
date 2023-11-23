@@ -1,0 +1,162 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import imgAbout from '../assets/illustration-flowing-conversation.svg';
+import { Image } from 'astro:assets';
+import AboutMe from '../components/AboutMe.astro';
+---
+
+<BaseLayout>
+    <section>
+        <div class="container">
+            <h1>We are all creatives at heart</h1>
+            <div class="grid-layout">
+                <div class="wrap-text">
+                    <ul>
+                        <li class="detail">
+                            <p class="detail-number">1</p>
+                            <p class="detail-text">
+                                Your project deserves our high-end level of
+                                English so that it stands out for the right
+                                reasons.
+                            </p>
+                        </li>
+                        <li class="detail">
+                            <p class="detail-number">2</p>
+                            <p class="detail-text">
+                                We know that one of the most difficult things is
+                                to trust somebody else to work on your project.
+                            </p>
+                        </li>
+                        <li class="detail">
+                            <p class="detail-number">3</p>
+                            <p class="detail-text">
+                                That’s why we are here, when and where you need
+                                us, for all your English needs.
+                            </p>
+                        </li>
+                        <p></p>
+                    </ul>
+                    <div class="wrap-button">
+                        <p class="wrap-button-p">Are you ready?</p>
+                        <a href="/services"
+                            ><span>Join forces</span><svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="32"
+                                height="32"
+                                viewBox="0 0 24 24"
+                                ><path
+                                    fill="currentColor"
+                                    d="M9.575 12L5 7.4L6.4 6l6 6l-6 6L5 16.6L9.575 12Zm6.6 0L11.6 7.4L13 6l6 6l-6 6l-1.4-1.4l4.575-4.6Z"
+                                ></path></svg
+                            >
+                        </a>
+                    </div>
+                </div>
+                <div class="wrap-image">
+                    <Image src={imgAbout} alt="person studying" />
+                </div>
+            </div>
+        </div>
+    </section>
+</BaseLayout>
+
+<style>
+    section {
+        padding-block: var(--block-flow-md);
+    }
+
+    h1 {
+        text-align: center;
+    }
+
+    ul {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        max-width: 530px;
+        margin-block: 2rem 1rem;
+    }
+
+    .grid-layout {
+        padding-block: 5rem;
+        /* padding-inline: 3rem; */
+    }
+
+    .detail {
+        display: grid;
+        grid-template-columns: 40px auto;
+        gap: 0.3rem;
+    }
+
+    .detail-number {
+        font-weight: 600;
+        padding: 0.2rem;
+        width: 30px;
+        height: 30px;
+        background-color: rgb(244, 205, 155);
+        border-radius: 50%;
+        display: grid;
+        align-content: center;
+        justify-content: center;
+    }
+
+    .detail-text {
+        font-size: clamp(16px, 3vw, 20px);
+    }
+
+    .wrap-button,
+    .wrap-button > a {
+        display: flex;
+        align-items: center;
+        justify-content: start;
+    }
+
+    .wrap-button-p {
+        font-size: 20px;
+        font-weight: 600;
+        letter-spacing: 1px;
+        font-family: var(--font-third);
+        margin-inline: 3rem 0.5rem;
+        margin-top: 0.6rem;
+    }
+
+    .wrap-image {
+        max-width: 550px;
+        justify-self: end;
+    }
+
+    img {
+        object-fit: contain;
+    }
+
+    a {
+        background-color: var(--dark-blue-clr);
+        color: var(--dark-blue-clr);
+        color: var(--bg-light-clr);
+
+        font-size: 16px;
+        padding: 0.4rem 1rem;
+        font-weight: 600;
+        cursor: pointer;
+        border-radius: 30px;
+    }
+
+    a svg {
+        transition: transform 200ms ease-in-out;
+    }
+
+    a:hover svg {
+        transform: translateX(10px);
+    }
+
+    img {
+        height: 100%;
+    }
+
+    /* @media (min-width: 1000px) {
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+        }
+    } */
+</style>

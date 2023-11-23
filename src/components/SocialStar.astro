@@ -1,0 +1,94 @@
+---
+const { number, description } = Astro.props;
+---
+
+<article class="col">
+    <h2>{number}</h2>
+    <p>{description}</p>
+    <div class="wrap-star">
+        <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="32"
+            height="32"
+            viewBox="0 0 24 24"
+            ><path
+                fill="currentColor"
+                d="m5.825 22l1.625-7.025L2 10.25l7.2-.625L12 3l2.8 6.625l7.2.625l-5.45 4.725L18.175 22L12 18.275L5.825 22Z"
+            ></path></svg
+        >
+        <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="32"
+            height="32"
+            viewBox="0 0 24 24"
+            ><path
+                fill="currentColor"
+                d="m5.825 22l1.625-7.025L2 10.25l7.2-.625L12 3l2.8 6.625l7.2.625l-5.45 4.725L18.175 22L12 18.275L5.825 22Z"
+            ></path></svg
+        >
+        <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="32"
+            height="32"
+            viewBox="0 0 24 24"
+            ><path
+                fill="currentColor"
+                d="m5.825 22l1.625-7.025L2 10.25l7.2-.625L12 3l2.8 6.625l7.2.625l-5.45 4.725L18.175 22L12 18.275L5.825 22Z"
+            ></path></svg
+        >
+        <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="32"
+            height="32"
+            viewBox="0 0 24 24"
+            ><path
+                fill="currentColor"
+                d="m5.825 22l1.625-7.025L2 10.25l7.2-.625L12 3l2.8 6.625l7.2.625l-5.45 4.725L18.175 22L12 18.275L5.825 22Z"
+            ></path></svg
+        >
+        <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="32"
+            height="32"
+            viewBox="0 0 24 24"
+            ><path
+                fill="currentColor"
+                d="m5.825 22l1.625-7.025L2 10.25l7.2-.625L12 3l2.8 6.625l7.2.625l-5.45 4.725L18.175 22L12 18.275L5.825 22Z"
+            ></path></svg
+        >
+    </div>
+</article>
+
+<style>
+    .col {
+        background-color: #fcfcfc;
+        padding: 1.5rem;
+        border-radius: 5px;
+    }
+
+    h2 {
+        color: var(--dark-orange-clr);
+        font-size: 2rem;
+    }
+
+    p {
+        color: var(--bg-dark-clr);
+        font-weight: 500;
+        text-transform: uppercase;
+        opacity: 0.8;
+        font-size: 16px;
+        font-family: var(--font-secondary);
+        line-height: 1;
+        letter-spacing: 1px;
+        margin-block: 0.9rem 0.5rem;
+    }
+
+    .wrap-star {
+        width: max-content;
+        margin-inline: auto;
+    }
+
+    svg {
+        color: var(--light-orange-clr);
+    }
+</style>

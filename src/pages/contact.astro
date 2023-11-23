@@ -1,34 +1,32 @@
 ---
-import BaseLayout from "../layouts/BaseLayout.astro";
-import Form from "../components/Form.astro";
-
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Form from '../components/Form.astro';
 ---
 
 <BaseLayout>
-
-    <main >
+    <main>
         <div class="container">
             <div class="grid">
                 <div class="col-1 border-radius">
                     <h2>Contact Me</h2>
                     <ul>
                         <li>
-                            <figure> 
-                                <img src="../assets/location.svg" alt=""> 
-                            </figure> 
-                            <p>siempreviva 350</p> 
+                            <figure>
+                                <img src="../assets/location.svg" alt="" />
+                            </figure>
+                            <p>siempreviva 350</p>
                         </li>
                         <li>
-                            <figure> 
-                                <img src="../assets/email.svg" alt=""> 
-                            </figure> 
-                            <p>janelle@gmail.com</p> 
+                            <figure>
+                                <img src="../assets/email.svg" alt="" />
+                            </figure>
+                            <p>janelle@gmail.com</p>
                         </li>
                         <li>
-                            <figure> 
-                                <img src="../assets/phone.svg" alt=""> 
-                            </figure> 
-                            <p>351 3114789</p> 
+                            <figure>
+                                <img src="../assets/phone.svg" alt="" />
+                            </figure>
+                            <p>351 3114789</p>
                         </li>
                     </ul>
                 </div>
@@ -36,11 +34,10 @@ import Form from "../components/Form.astro";
                     <h1>Get in Touch</h1>
                     <p>I will answer as soon as posible</p>
                     <Form />
-                </div>   
+                </div>
             </div>
         </div>
     </main>
-
 </BaseLayout>
 
 <style>
@@ -58,7 +55,7 @@ import Form from "../components/Form.astro";
 
     .col-1 {
         background-color: var(--soft-blue-clr);
-        color:#fff;
+        color: #fff;
         padding: 2rem;
         max-width: 300px;
         margin-inline: auto;
@@ -98,14 +95,14 @@ import Form from "../components/Form.astro";
         margin-block: 1rem;
     }
 
-    @media(min-width: 900px){
+    @media (min-width: 900px) {
         .grid {
             flex-direction: row;
         }
 
         .col-2 h1 {
-        font-size: 2rem;
-    }
+            font-size: 2rem;
+        }
 
         .col-2 {
             padding-left: 12rem;
@@ -120,8 +117,5 @@ import Form from "../components/Form.astro";
             width: 600px;
             transform: translateX(120px);
         }
-
-        
     }
-
 </style>

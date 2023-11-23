@@ -1,27 +1,20 @@
 ---
-import BaseLayout from "../layouts/BaseLayout.astro";
-import CardTestimonial from "../components/CardTestimonial.astro";
-
+import BaseLayout from '../layouts/BaseLayout.astro';
+import CardTestimonial from '../components/CardTestimonial.astro';
 ---
 
 <BaseLayout>
-
-<main >
-    <div class="container">
-        <h1 class="title">Testimonials</h1>
-        <div class="grid">
-
-            <div><CardTestimonial /></div>
-            <div><CardTestimonial /></div>
-            <div><CardTestimonial /></div>       
-            
+    <main>
+        <div class="container">
+            <h1 class="title">Testimonials</h1>
+            <div class="grid">
+                <div><CardTestimonial /></div>
+                <div><CardTestimonial /></div>
+                <div><CardTestimonial /></div>
+            </div>
         </div>
-        
-    </div>
-</main>
-
+    </main>
 </BaseLayout>
-
 
 <style>
     main {
@@ -44,5 +37,4 @@ import CardTestimonial from "../components/CardTestimonial.astro";
     .grid div:last-child {
         transform: translateX(20rem);
     }
-    
 </style>

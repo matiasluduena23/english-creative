@@ -1,0 +1,193 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout>
+    <section>
+        <div class="container">
+            <h2>Spot Mentoring</h2>
+            <div class="wrap-text">
+                <div class="good-container">
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="30"
+                        height="30"
+                        viewBox="0 0 32 32"
+                        ><path
+                            d="M23.93 21L30 15l-6.07-6l-1.43 1.41L27.14 15l-4.64 4.59L23.93 21z"
+                            fill="currentColor"></path><path
+                            d="M12 4a5 5 0 1 1-5 5a5 5 0 0 1 5-5m0-2a7 7 0 1 0 7 7a7 7 0 0 0-7-7z"
+                            fill="currentColor"></path><path
+                            d="M22 30h-2v-5a5 5 0 0 0-5-5H9a5 5 0 0 0-5 5v5H2v-5a7 7 0 0 1 7-7h6a7 7 0 0 1 7 7z"
+                            fill="currentColor"></path></svg
+                    >
+                    <p>Good for ?</p>
+                </div>
+
+                <ul class="wrap-text-list">
+                    <li>
+                        Web Designers: <span
+                            >Lorem ipsum dolor sit amet consectetur adipisicing
+                            elit. Esse</span
+                        >
+                    </li>
+                    <li>
+                        Photographers: <span
+                            >Lorem ipsum dolor sit amet consectetur adipisicing
+                            elit. Esse</span
+                        >
+                    </li>
+                    <li>
+                        Developers: <span
+                            >Lorem ipsum dolor sit amet consectetur adipisicing
+                            elit. Esse</span
+                        >
+                    </li>
+                </ul>
+            </div>
+            <div class="wrap-feature">
+                <h3>Key Features</h3>
+                <ul class="feature-list">
+                    <li>
+                        <span>1.</span><p>
+                            Lorem ipsum dolor sit, amet consectetur adipisicing
+                            elit. Saepe, reiciendis.
+                        </p>
+                    </li>
+                    <li>
+                        <span>2.</span><p>
+                            Lorem ipsum dolor sit, amet consectetur adipisicing
+                            elit. Saepe, reiciendis.
+                        </p>
+                    </li>
+                    <li>
+                        <span>3.</span>
+                        <p>
+                            Lorem ipsum dolor sit, amet consectetur adipisicing
+                            elit. Saepe, reiciendis.
+                        </p>
+                    </li>
+                    <li>
+                        <span>4.</span>
+                        <p>
+                            Lorem ipsum dolor sit, amet consectetur adipisicing
+                            elit. Saepe, reiciendis.
+                        </p>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="wrap-plan">
+                <h3 class="title-plan">
+                    Let Make a <span class="underline">Plan!</span>
+                </h3>
+                <p>
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    Totam harum molestias necessitatibus, ducimus voluptatem,
+                    laboriosam ab aliquam dignissimos hic distinctio repellendus
+                    iusto esse minima laudantium labore quisquam maiores. Saepe
+                    numquam quas culpa delectus dolorum rem doloribus quisquam
+                    est odit deleniti.
+                </p>
+            </div>
+        </div>
+    </section>
+</BaseLayout>
+
+<style>
+    section {
+        margin-block: var(--block-flow-md);
+    }
+
+    .container {
+        max-width: 750px;
+    }
+    h2 {
+        font-size: clamp(2rem, 5vw, 3rem);
+        /* border-bottom: 4px solid var(--soft-green-clr); */
+        width: max-content;
+    }
+
+    .wrap-text {
+        margin-block: var(--block-flow-md);
+        background-color: var(--light-orange-clr);
+        border-left: 4px solid var(--dark-orange-clr);
+        padding: 1rem;
+    }
+
+    .good-container {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        margin-bottom: 0.7rem;
+    }
+
+    .good-container p {
+        font-size: 1.5rem;
+        font-weight: 700;
+        color: var(--dark-orange-clr);
+    }
+
+    .good-container svg path {
+        fill: var(--dark-orange-clr);
+    }
+
+    .wrap-text-list {
+        margin-left: 3.3rem;
+    }
+
+    .wrap-text-list li {
+        margin-bottom: 0.5rem;
+        font-weight: 600;
+    }
+
+    .wrap-text-list li span {
+        opacity: 0.8;
+        font-weight: 500;
+    }
+
+    .wrap-text-list li::before {
+        content: '\2022';
+        color: var(--dark-orange-clr);
+        display: inline-block;
+        width: 1em;
+        margin-left: -1em;
+    }
+
+    .wrap-feature {
+        margin-block: var(--block-flow-md);
+    }
+
+    h3 {
+        font-size: 2rem;
+        margin-block: 2rem 1rem;
+    }
+
+    .underline {
+        position: relative;
+    }
+
+    .underline::before {
+        content: '';
+        position: absolute;
+        height: 6px;
+        width: 100%;
+        bottom: 0px;
+        left: 0;
+        background-color: var(--dark-orange-clr);
+        border-top-right-radius: 150%;
+        border-top-left-radius: 150%;
+    }
+
+    .feature-list li {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .feature-list li span {
+        font-weight: 700;
+        color: var(--dark-orange-clr);
+    }
+</style>

@@ -1,79 +1,149 @@
 ---
-import ListCard from "./ListCard.astro";
-
-const {title, month, goodFor, color, darkColor, wave} = Astro.props;
+const { data } = Astro.props;
+const { className, title, month, goodFor, details } = data;
 ---
 
-<div class="card">
+<article class={className}>
     <h2>{title}</h2>
-    <p class="month">{month} <span>month</span></p>
-  
-    <ListCard colorSvg={color} />
-    <div class="good-for">
-        <p>Good for:</p>
-        <p>{goodFor}</p>
+    <p><span class="price">{month}</span>Month</p>
+    <div class="body">
+        <ul>
+            <hr />
+
+            <li>{details[0]}</li>
+            <hr />
+            <li>{details[1]}</li>
+            <hr />
+            <li>{details[2]}</li>
+            <hr />
+        </ul>
+        <a href="/spot">Learn more</a>
     </div>
-    <button>See details</button>
-</div>
+</article>
 
-<style define:vars={{color, darkColor,  wave}}>
-
-    .card {
-        min-width: 300px;
-        height: 500px;
-        padding: 1rem;
-        background: var(--wave);
-        text-align: center;
+<style>
+    article {
+        background-color: white;
+        padding: 1.9rem;
         border-radius: 10px;
-        box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px; 
+        display: flex;
+        flex-direction: column;
+        gap: 1.6rem;
+        width: 330px;
+        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+        text-align: center;
+    }
+
+    p {
+        font-weight: 600;
     }
 
     h2 {
-        text-transform: uppercase;
-        font-weight: 600;
-        font-size: 1rem;
-        
+        color: var(--bg-dark-clr);
+        font-size: 18px;
     }
 
-    .month {
-        font-size: 5rem;
-        font-weight: 600;
-        font-family: var(--font-secondary);
-        margin-block: -1rem;
-        color: #f4f4f4;
-    }
-
-    .month span {
-        font-size: 1rem;
-        margin-left: -15px;
-    }
-
-    .good-for p:first-child{
-        color: var(--color);
-        font-weight: 600;
-    }
-
-    .good-for p:last-child{
-        font-size: 12px;
-        font-weight: 600;
-        color: rgba(0, 0, 0, .5);
-        text-transform: capitalize;
-    }
-
-    button {
-        margin-block: 2rem;
-        padding: 0.8rem 2rem;
-        border: none;
-        border-radius: 20px;
-        background: linear-gradient(to right bottom, var(--darkColor) 40px, var(--color));
-        color: #fff;
-        transition: background 300ms ease-in;
+    .price {
+        font-size: 4rem;
+        line-height: 1.1;
+        color: rgb(26, 44, 108), 0, 0);
         font-weight: 700;
+    }
+
+    hr {
+        border: none;
+        border-bottom: 1px solid var(--bg-dark-clr);
+        opacity: 0.2;
+    }
+
+    li {
+        margin-block: 0.8rem;
+        color: var(--bg-dark-clr);
+        font-weight: 600;
+        font-size: 1rem;
+    }
+
+   a {
+    display: inline-block;
+        margin-top: 1.7rem;
+        padding-block: 0.7rem;
+        width: 100%;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        font-weight: 700;
+        font-family: var(--ff);
+        color: white;
+        border-radius: 5px;
+        background: linear-gradient(
+            to right,
+            var(--soft-blue-clr),
+            var(--dark-blue-clr)
+        );
+        border: 1px solid transparent;
+        border-left: var(--soft-blue-clr);
+        border-right: var(--dark-blue-clr);
         cursor: pointer;
+        transition: background 200ms ease-in-out;
     }
 
-    button:hover {
-        background: linear-gradient(to left bottom, var(--darkColor) 20px , var(--color))
+    a:hover {
+        background: none;
+        background-color: transparent;
+        border: 1px solid var(--dark-blue-clr);
+        color: var(--dark-blue-clr);
     }
 
+    /* middle card - secondary class  */
+    .secondary {
+        background: linear-gradient(
+            to bottom right,
+            var(--soft-blue-clr) 5%,
+            var(--dark-blue-clr)
+        );
+        color: white;
+    }
+
+    .secondary > h2,
+    .secondary .price,
+    .secondary > .body ul > li {
+        color: white;
+    }
+
+    .secondary > .body ul > hr {
+        border-bottom: 1px solid white;
+    }
+
+    .secondary > .body > a {
+        background: white;
+        color: var(--dark-blue-clr);
+        border: 1px solid transparent;
+    }
+
+    .secondary > .body > a:hover {
+        background: transparent;
+        color: white;
+        border: 1px solid white;
+    }
+
+    @media (min-width: 1160px) {
+        article {
+            height: 420px;
+        }
+
+        .basic {
+            border-top-right-radius: 0px;
+            border-bottom-right-radius: 0px;
+        }
+
+        .master {
+            border-top-left-radius: 0px;
+            border-bottom-left-radius: 0px;
+        }
+
+        .secondary {
+            height: 470px;
+            padding-top: 3.4rem;
+            width: 330px;
+        }
+    }
 </style>
