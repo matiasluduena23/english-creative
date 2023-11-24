@@ -1,0 +1,26 @@
+---
+const { title, text, id } = Astro.props;
+---
+
+<h2>
+    {title}
+    <span id={id} data-wait="2000" data-text={text}> !</span>
+</h2>
+
+<script src="../../scripts/typeWritter.js"></script>
+
+<style>
+    h2 {
+        font-weight: 600;
+        color: var(--bg-dark-clr);
+        margin-top: 1rem;
+        opacity: 0.7;
+    }
+
+    span {
+        display: block;
+        color: var(--bg-dark-clr);
+        height: 20px;
+        opacity: 1;
+    }
+</style>

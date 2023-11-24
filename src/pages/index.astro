@@ -8,23 +8,22 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         <div class="container">
             <div class="content-text">
                 <h1>
-                    Where your English comes to <span class="underline"
-                        >life</span
+                    <span class="english">English Creative</span>
+                    Where <span class="word-color">your</span> English comes to <span
+                        class="word-color">life</span
                     >
                 </h1>
-                <p class="subtitle">
-                    Powerful words <span>Positive change!!!</span>
-                </p>
+
                 <a href="/services/" class="btn">Try it!</a>
             </div>
             <div class="video">
                 <img src="../images/video.jpg" alt="home-video" />
             </div>
-            <div class="social border-radius">
+            <!-- <div class="social border-radius">
                 <SocialStar number="+7" description="company experiences" />
                 <SocialStar number="+30" description="professionals helper" />
                 <SocialStar number="+15" description="speakers conferences" />
-            </div>
+            </div> -->
         </div>
     </main>
 </BaseLayout>
@@ -42,26 +41,9 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         gap: 1rem;
         text-align: center;
     }
-
-    /* .title-last-word {
-        color: var(--soft-green-clr);
-        /* border-bottom: 3px solid var(--soft-green-clr); */
-    /* }  */
-
-    .underline {
-        position: relative;
-    }
-
-    .underline::before {
-        content: '';
-        position: absolute;
-        height: 6px;
-        width: 100%;
-        bottom: 10px;
-        left: 0;
-        background-color: var(--soft-green-clr);
-        border-top-right-radius: 150%;
-        border-top-left-radius: 150%;
+    .english {
+        display: block;
+        font-size: clamp(2.2rem, 5vw, 4.2rem);
     }
 
     .subtitle {
