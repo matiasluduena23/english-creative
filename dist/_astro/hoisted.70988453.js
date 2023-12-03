@@ -1,0 +1,1 @@
+const c=document.querySelector(".toggle"),e=document.querySelector(".navigation");c.addEventListener("click",t=>{e.classList.toggle("expanded")});const n=e.querySelectorAll("a");n.forEach(t=>{t.addEventListener("click",()=>{e.classList.remove("expanded")})});

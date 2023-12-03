@@ -1,6 +1,7 @@
 ---
 import '../style/global.css';
 import Header from '../components/header/Header.astro';
+import Dialog from '../components/services/Dialog.astro';
 ---
 
 <html lang="en">
@@ -16,5 +17,6 @@ import Header from '../components/header/Header.astro';
         <Header />
 
         <slot />
+        <Dialog />
     </body>
 </html>

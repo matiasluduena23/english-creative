@@ -107,3 +107,8 @@ img {
         minmax(min(100%, var(--grid-min, 20ch)), 1fr)
     );
 }
+
+/* cursor */
+.txt {
+    border-right: 2px solid black;
+}

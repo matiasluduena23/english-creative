@@ -1,0 +1,277 @@
+---
+---
+
+<dialog>
+    <button class="close">X</button>
+    <h2>Survey</h2>
+    <p class="subtitle">You're here because you...</p>
+    <form>
+        <section class="hablo">
+            <p class="title-hablo">
+                Hablo ingles suficientemente bien? Puedo/tengo tiempo para
+                traducir mi propio material?
+            </p>
+            <div class="radio-hablo">
+                <span>Si</span>
+                <input type="radio" name="hablo-ingles" id="hablo-ingles-yes" />
+            </div>
+            <div class="radio-hablo">
+                <span>No</span>
+                <input type="radio" name="hablo-ingles" id="hablo-ingles-no" />
+            </div>
+        </section>
+
+        <section class="questions">
+            <h3 class="questions-title">¡English Creative!</h3>
+            <p class="questions-subtitle">¿Qué necesito?</p>
+            <div class="grid-layout">
+                <div class="col-1">
+                    <h4>COACHING</h4>
+                    <article class="col-1-coaching">
+                        <div class="wrap-checkbox">
+                            <input
+                                type="checkbox"
+                                id="cbox-1"
+                                value="first-checkbox"
+                            /><label>Pitch/presentación</label>
+                        </div>
+                        <div class="wrap-checkbox">
+                            <input
+                                type="checkbox"
+                                id="cbox-2"
+                                value="second-checkbox"
+                            />
+                            <label for="cbox2">Entrevistas laborales</label>
+                        </div>
+                        <div class="wrap-checkbox">
+                            <input
+                                type="checkbox"
+                                id="cbox-1"
+                                value="first-checkbox"
+                            /><label
+                                >Reunion con inversores, productores,
+                                benefactores</label
+                            >
+                        </div>
+                        <div class="wrap-checkbox">
+                            <input
+                                type="checkbox"
+                                id="cbox-2"
+                                value="second-checkbox"
+                            />
+                            <label for="cbox2"
+                                >Seguimiento con inversores, productores,
+                                benefactore</label
+                            >
+                        </div>
+                        <div class="wrap-checkbox">
+                            <input
+                                type="checkbox"
+                                id="cbox-2"
+                                value="second-checkbox"
+                            />
+                            <label for="cbox2"
+                                >Coaching a medida, e.j pulir/perfeccionar
+                                Business English (Grammar, Vocabulary,
+                                Speaking/Reading/Writing/Listenin</label
+                            >
+                        </div>
+                    </article>
+                </div>
+                <div class="col-2">
+                    <h4>TRADUCCIÓN</h4>
+                    <article class="col-2-traduction">
+                        <div class="wrap-checkbox">
+                            <input
+                                type="checkbox"
+                                id="cbox-1"
+                                value="first-checkbox"
+                            />
+                            <label>Pitch (1, 3, 5 minutos)</label>
+                        </div>
+                        <div class="wrap-checkbox">
+                            <input
+                                type="checkbox"
+                                id="cbox-2"
+                                value="second-checkbox"
+                            />
+                            <label for="cbox2">Pitch deck</label>
+                        </div>
+                        <div class="wrap-checkbox">
+                            <input
+                                type="checkbox"
+                                id="cbox-1"
+                                value="first-checkbox"
+                            /><label>Video (subtítulos)</label>
+                        </div>
+                        <div class="wrap-checkbox">
+                            <input
+                                type="checkbox"
+                                id="cbox-2"
+                                value="second-checkbox"
+                            />
+                            <label for="cbox2"
+                                >Video (narración voz en off</label
+                            >
+                        </div>
+                        <div class="wrap-checkbox">
+                            <input
+                                type="checkbox"
+                                id="cbox-2"
+                                value="second-checkbox"
+                            />
+                            <label for="cbox2"
+                                >Material de comunicación (puntual)</label
+                            >
+                        </div>
+                        <div class="wrap-checkbox">
+                            <input
+                                type="checkbox"
+                                id="cbox-2"
+                                value="second-checkbox"
+                            />
+                            <label for="cbox2"
+                                >Material de comunicación continuo -
+                                newsletters, contenido redes sociales</label
+                            >
+                        </div>
+
+                        <div class="wrap-checkbox">
+                            <input
+                                type="checkbox"
+                                id="cbox-2"
+                                value="second-checkbox"
+                            />
+                            <label for="cbox2">Correos electrónicos</label>
+                        </div>
+                    </article>
+                </div>
+            </div>
+            <button type="button" class="submit">Agenda tu reunión</button>
+        </section>
+    </form>
+</dialog>
+<script src="../../scripts/dialog.js"></script>
+<style>
+    dialog {
+        padding: 1rem;
+        margin: auto;
+        text-align: center;
+        border-radius: 10px;
+        border: none;
+        max-width: 750px;
+    }
+
+    dialog::backdrop {
+        background-color: hsla(0, 0%, 0%, 0.7);
+    }
+
+    .close {
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        border: 2px solid var(--bg-dark-clr);
+        padding: 0.2rem 0.3rem;
+        border-radius: 5px;
+        font-weight: 700;
+        font-size: 0.8rem;
+        cursor: pointer;
+    }
+
+    h2 {
+        font-family: var(--font-third);
+        font-size: 2.2rem;
+        line-height: 1.4;
+    }
+
+    .subtitle {
+        font-weight: 500;
+        font-family: var(--font-secondary);
+        opacity: 0.8;
+    }
+
+    .radio-hablo {
+        display: inline-block;
+        margin-right: 0.5rem;
+        margin-top: 1rem;
+    }
+
+    form {
+        margin-block: 1rem;
+
+        .hablo {
+            margin-block: 1.5rem;
+        }
+
+        .title-hablo {
+            font-weight: 600;
+            opacity: 0.9;
+            padding-block: 0.5rem;
+        }
+    }
+
+    .grid-layout {
+        gap: 2rem;
+    }
+
+    .questions {
+        display: none;
+    }
+
+    .col-1,
+    .col-2 {
+        background-color: rgb(238, 237, 237);
+        border-radius: 5px;
+        padding: 2rem;
+    }
+
+    .questions-title {
+        font-family: var(--font-third);
+        font-size: 2rem;
+        line-height: 1;
+    }
+
+    .questions-subtitle {
+        font-weight: 600;
+        color: var(--dark-green-clr);
+        margin-bottom: 2rem;
+    }
+
+    h4 {
+        margin-bottom: 0.8rem;
+        font-family: var(--font-third);
+        letter-spacing: 1px;
+        font-size: 1.5rem;
+    }
+    .wrap-checkbox {
+        display: flex;
+        gap: 0.7rem;
+        align-items: start;
+        justify-content: start;
+        text-align: start;
+        margin-bottom: 0.5rem;
+    }
+
+    input[type='checkbox'] {
+        margin-top: 0.25rem;
+    }
+
+    .submit {
+        display: inline-block;
+        background-color: var(--dark-blue-clr);
+        color: var(--bg-light-clr);
+        font-weight: 600;
+        font-size: 16px;
+        padding: 0.8rem 2rem;
+        border-radius: 30px;
+        transition: background 300ms ease-in-out;
+        letter-spacing: 1px;
+        border: none;
+        cursor: pointer;
+        margin-top: 2rem;
+    }
+
+    .submit:hover {
+        opacity: 0.8;
+    }
+</style>

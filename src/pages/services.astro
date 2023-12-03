@@ -5,6 +5,7 @@ import { getCollection } from 'astro:content';
 const allMentoring = await getCollection('mentoring');
 const allTranslation = await getCollection('translation');
 import TypeWritter from '../components/services/TypeWritter.astro';
+import Dialog from '../components/services/Dialog.astro';
 ---
 
 <BaseLayout>
@@ -47,6 +48,7 @@ import TypeWritter from '../components/services/TypeWritter.astro';
             </div>
         </div>
     </main>
+    <Dialog />
 </BaseLayout>
 
 <style>
